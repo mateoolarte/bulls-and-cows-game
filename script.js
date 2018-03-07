@@ -2,22 +2,26 @@ $(document).ready(() => {
   Array.prototype.allValuesSame = function () {
 
     for (let i = 1; i < this.length; i++) {
-      if (this[i] !== this[0]) return false;
+      if (this[i] !== this[0]) return false
     }
 
-    return true;
+    return true
   }
 
-  function shuffle(o) {
-    for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-    return o;
+  const shuffleNum = (arr) => {
+    arr = arr.split('')
+    
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+
+    return arr.slice(0, 4)
   }
 
-  function countInArray(array, number) {
-    return array.filter(item => item == number).length;
-  }
+  const countInArray = (array, number) => array.filter(item => item == number).length
 
-  const Secretnumber = () => shuffle("0123456789".split('')).join('').substring(0, 4)
+  const Secretnumber = () => shuffleNum("123456789").join('')
 
   var numberSecret = Secretnumber()
   var numberSecretString = numberSecret
