@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.error {
+  color: rgb(236, 57, 26);
+}
+
+input.error {
+  background-color: rgba(236, 57, 26, 0.3);
+}
+
+.none {
+  display: none;
+}
+
+input {
+  padding: 10px 30px;
+  font-size: 22px;
+  text-align: center;
+}
+
+table {
+  width: 20%;
+  margin: 50px auto 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 10px;
+  border: 1px solid #bebec0;
+}
+
+.popup-winner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-winner div {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.popup-winner h2 {
+  margin: 40px 0;
+  color: white;
+  font-size: 92px;
+}
+
+.popup-winner a {
+  padding: 15px;
+  background-color: #FF5722;
+  color: white;
+  text-decoration: none;
+}
